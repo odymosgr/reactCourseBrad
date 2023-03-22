@@ -70,7 +70,7 @@ function Search() {
   }
 
   return (
-    <div className="search-overlay">
+    <>
       <div className="search-overlay-top shadow-sm">
         <div className="container container--narrow">
           <label htmlFor="live-search-field" className="search-overlay-icon">
@@ -97,11 +97,11 @@ function Search() {
                 })}
               </div>
             )}
-            {Boolean(!state.results.length) && <p class="alert alert-danger text-center shadow-sm">Sorry, we could not find any results for that search.</p>}
+            {Boolean(!state.results.length) && <p className="alert alert-danger text-center shadow-sm">Sorry, we could not find any results for that search.</p>}
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

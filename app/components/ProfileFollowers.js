@@ -12,7 +12,6 @@ function ProfileFollowers() {
     async function fetchPosts() {
       try {
         const response = await Axios.get(`/profile/${username}/followers`)
-        console.log(response.data)
         setPosts(response.data)
         setIsLoading(false)
       } catch (e) {
