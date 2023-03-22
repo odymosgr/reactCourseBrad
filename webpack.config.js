@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require("path")
 
 module.exports = {
   entry: "./app/main.js",
@@ -21,6 +21,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"]
+      },
+      {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
@@ -32,4 +36,4 @@ module.exports = {
       }
     ]
   }
-};
+}
