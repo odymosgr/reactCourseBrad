@@ -3,9 +3,11 @@ import { Link } from "react-router-dom"
 import HeaderLoggedOut from "./HeaderLoggedOut"
 import HeaderLoggedIn from "./HeaderLoggedIn"
 import StateContext from "../StateContext"
+import { proposalSyntaxPlugins } from "@babel/preset-env/lib/shipped-proposals"
 
 function Header() {
   const appState = useContext(StateContext)
+  const headerContent = appState.loggedIn ? <HeaderLoggedIn /> : <HeaderLoggedOut />
 
   return (
     <header className="header-bar bg-primary mb-3">
@@ -16,7 +18,7 @@ function Header() {
             ComplexApp{" "}
           </Link>
         </h4>
-        {appState.loggedIn ? <HeaderLoggedIn /> : <HeaderLoggedOut />}
+        {!proposalSyntaxPlugins.staticEmpty ? headerContent : ""}
       </div>
     </header>
   )
