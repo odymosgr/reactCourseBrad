@@ -15,7 +15,7 @@ This is a full-stack React project built as part of the [React For The Rest Of U
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - React 
 - Node.js
